@@ -201,7 +201,7 @@ alias gitback='git checkout -'
 
 alias flip='docker container restart inspections-service'
 
-alias cz='cat ~/.zshrc"
+alias cz='cat ~/.zshrc'
 
 function sz () {
     source ~/.zshrc
