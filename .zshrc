@@ -205,7 +205,7 @@ function sz () {
     source ~/.zshrc
     config add ~/.zshrc
     ron_quote=$(curl http://ron-swanson-quotes.herokuapp.com/v2/quotes)
-    parsed_quote=$(echo "$quote" | sed 's/[][]//g')
+    parsed_quote=$(echo "$ron_quote" | sed 's/[][]//g')
     config commit -m "$parsed_quote"
     config push
 }
