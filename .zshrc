@@ -204,7 +204,9 @@ alias flip='docker container restart inspections-service'
 function sz () {
     source ~/.zshrc
     config add ~/.zshrc
-    config commit -m "update szhrc"
+    ron_quote=$(curl http://ron-swanson-quotes.herokuapp.com/v2/quotes)
+    parsed_quote=$(echo "$quote" | sed 's/[][]//g')
+    config commit -m "$parsed_quote"
     config push
 }
 
