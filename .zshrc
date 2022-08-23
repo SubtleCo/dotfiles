@@ -203,7 +203,7 @@ alias flip='docker container restart inspections-service'
 
 function sz () {
     source ~/.zshrc
-    config add .zshrc
+    config add ~/.zshrc
     config commit -m "update szhrc"
     config push
 }
