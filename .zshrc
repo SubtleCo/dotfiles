@@ -78,7 +78,7 @@ help () {
 # export PYENV_ROOT="$HOME/.pyenv/shims"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # export PIPENV_PYTHON="$PYENV_ROOT/python"
-export SHELL_SCRIPTS_PATH="$HOME/Documents/Shell_Scripts"
+export SHELL_SCRIPTS_PATH="$HOME/Documents/jetbrains_scripts"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:SHELL_SCRIPTS_PATH:$PATH"
 eval "$(pyenv init -)"
