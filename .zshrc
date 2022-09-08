@@ -266,3 +266,5 @@ alias ops_bapi_db='awslogin -db=ops-cla-bapi-us-east-1 aws-developer'
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 alias vz="vim ~/.zshrc"
 alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
+alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
+alias c9='ssh cloud9'
