@@ -252,7 +252,11 @@ function yest () {
     file=$(gdate -d "1 day ago" +'%d').txt
     vim ~/Documents/the_daily_mail/$year/$month/$file
 }
- 
+
+function envs () {
+    export $(grep -v '^#' .env | xargs)
+}
+
 alias reset_lvl_db='python3 manage.py loaddata users tokens gamers game_types games events'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
