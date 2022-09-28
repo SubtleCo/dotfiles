@@ -1,10 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/alex.martin/.oh-my-zsh"
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -88,8 +81,8 @@ export PYTHON_CONFIGURE_OPTS="--with-openssl=$(brew --prefix openssl)"
 export CFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix sqlite)/include -I$(brew --prefix bzip2)/include"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+# Shit for Weasyprint & Title Service
 export DYLD_FALLBACK_LIBRARY_PATH="$HOME/lib:/usr/local/lib:/usr/lib:/opt/homebrew/lib"
-
 # /opt/homebrew/opt/cairo/lib
 
 export LANG="en_US.UTF-8"
@@ -273,3 +266,4 @@ alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
 alias c9='ssh cloud9'
 alias nut='pipenv shell'
+alias c9_hash='echo c63d7a6b'
