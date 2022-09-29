@@ -1,3 +1,9 @@
+# Path to your oh-my-zsh installation.
+ export ZSH="/Users/alex.martin/.oh-my-zsh"
+
+ # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ ZSH_THEME="robbyrussell"
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
