@@ -261,6 +261,10 @@ function envs () {
     export $(grep -v '^#' .env | xargs)
 }
 
+function c9_hash () {
+    echo c63d7a6b | pbcopy
+}
+
 alias reset_lvl_db='python3 manage.py loaddata users tokens gamers game_types games events'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
