@@ -216,6 +216,11 @@ function resolve_env () {
     export $(grep -v '^#' .env | xargs)
 }
 
+function gen_c9_hash () {
+    name=$1
+    python ~/BuiltSource/my_scripts/c9_hash_gen.py $name
+}
+
 # Database scripts
 function trunk () {
     export $(grep -e 'MYSQL_DATABASE' .env | xargs)
