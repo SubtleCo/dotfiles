@@ -8,6 +8,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+
 mg () {
     mkdir -p "$1" && cd $_
 }
