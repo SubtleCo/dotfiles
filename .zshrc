@@ -21,7 +21,7 @@ autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
 
-alias k=kubecolor
+alias kubectl=kubecolor
 compdef kubecolor=kubectl # only needed for zsh
 export KUBECOLOR_OBJ_FRESH=12h # highlight resources newer than 12h
 
