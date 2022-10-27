@@ -1,5 +1,3 @@
-# Path to your oh-my-zsh installation.
- export ZSH="/Users/alex.martin/.oh-my-zsh"
 
  # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
  ZSH_THEME="robbyrussell"
@@ -10,6 +8,11 @@ source $ZSH/oh-my-zsh.sh
 
 source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
+kubeoff
+
+autoload -Uz compinit
+compinit
+source <(kubectl completion zsh)
 
 mg () {
     mkdir -p "$1" && cd $_
@@ -284,3 +287,4 @@ alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
 alias c9='ssh cloud9'
 alias nut='pipenv shell'
+alias k=kubectl
