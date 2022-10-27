@@ -2,7 +2,7 @@
  # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
  ZSH_THEME="robbyrussell"
 
-plugins=(brew git python tmux vault terraform)
+plugins=(brew git python tmux vault terraform kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
