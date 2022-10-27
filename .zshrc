@@ -14,6 +14,11 @@ autoload -Uz compinit
 compinit
 source <(kubectl completion zsh)
 
+alias k=kubecolor
+compdef kubecolor=kubectl # only needed for zsh
+export KUBECOLOR_OBJ_FRESH=12h # highlight resources newer than 12h
+
+
 mg () {
     mkdir -p "$1" && cd $_
 }
@@ -287,4 +292,3 @@ alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
 alias c9='ssh cloud9'
 alias nut='pipenv shell'
-alias k=kubectl
