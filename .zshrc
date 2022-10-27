@@ -12,7 +12,7 @@ fi
  # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
  ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(brew git python tmux vault terraform kubectl)
+plugins=(brew git python vault terraform kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
