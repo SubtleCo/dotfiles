@@ -101,6 +101,7 @@ help () {
 export SHELL_SCRIPTS_PATH="$HOME/Documents/jetbrains_scripts"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$SHELL_SCRIPTS_PATH:$PATH"
+export PATH=$PATH:~/Desktop/nand2tetris/tools
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
@@ -177,6 +178,8 @@ function integ () {
 
 # AWS RDS credentials
 alias prod_db='awslogin -db=prod-cla-soa-us-east-1 prod-support'
+alias prod_bapi_db='awslogin -db=prod-cla-bapi-replica-us-east-1 prod-support'
+alias ops_bapi_db='awslogin -db=ops-cla-bapi-us-east-1 aws-developer'
 alias ops_db='awslogin -db=ops-cla-soa-us-east-1 aws-developer'
 alias dev_db='awslogin -db=dev-cla-soa-us-east-1 aws-developer'
 
@@ -270,7 +273,7 @@ function today () {
     file=$(date +'%d').txt
     vim ~/Documents/the_daily_mail/$year/$month/$file
 }
-   
+
 function yest () {
     year=$(date +'%Y')
     month=$(date +'%m')
@@ -295,7 +298,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 eval "$(rbenv init - zsh)"
 
 alias inspections_db='docker exec -it inspections_db mysql --port=3306 --user=root --password=test --host=inspections_db --database=inspections'
-alias ops_bapi_db='awslogin -db=ops-cla-bapi-us-east-1 aws-developer'
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 alias vz="vim ~/.zshrc"
 alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
