@@ -101,7 +101,7 @@ help () {
 export SHELL_SCRIPTS_PATH="$HOME/Documents/jetbrains_scripts"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$SHELL_SCRIPTS_PATH:$PATH"
-export PATH=$PATH:~/Desktop/nand2tetris/tools
+export PATH=$PATH:~/Learning/nand2tetris/tools
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
@@ -121,10 +121,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Check python version
-echo "currently running"
-python --version
-source ~/.iterm2_shell_integration.zsh
 
 alias py='python'
 alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
@@ -304,6 +300,14 @@ alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
 alias c9='ssh cloud9'
 alias nut='pipenv shell'
+
+#################
+# Opening repos #
+#################
+alias bapi="phpstorm ~/BuiltSource/built-api"
+alias search="pycharm ~/BuiltSource/search-service"
+alias inpapi="webstorm ~/BuiltSource/inspections-product-api"
+alias insvc="pycharm ~/BuiltSource/inspections-service"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
