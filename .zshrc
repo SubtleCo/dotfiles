@@ -12,21 +12,21 @@ fi
  # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
  ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(brew git python vault terraform kubectl)
+# plugins=(brew git python vault terraform kubectl)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-PS1='$(kube_ps1)'$PS1
-kubeoff
-
-autoload -Uz compinit
-compinit
-source <(kubectl completion zsh)
-
-alias kubectl=kubecolor
-compdef kubecolor=kubectl # only needed for zsh
-export KUBECOLOR_OBJ_FRESH=12h # highlight resources newer than 12h
+# KubeCTL
+# source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+# PS1='$(kube_ps1)'$PS1
+# kubeoff
+# autoload -Uz compinit
+# compinit
+# source <(kubectl completion zsh)
+# alias kubectl=kubecolor
+# compdef kubecolor=kubectl # only needed for zsh
+# export KUBECOLOR_OBJ_FRESH=12h # highlight resources newer than 12h
 
 
 mg () {
@@ -131,33 +131,28 @@ function in () {
     ls
 }
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval
-            fuck () {
-                TF_PYTHONIOENCODING=$PYTHONIOENCODING;
-                export TF_SHELL=zsh;
-                export TF_ALIAS=fuck;
-                TF_SHELL_ALIASES=$(alias);
-                export TF_SHELL_ALIASES;
-                TF_HISTORY="$(fc -ln -10)";
-                export TF_HISTORY;
-                export PYTHONIOENCODING=utf-8;
-                TF_CMD=$(
-                    thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
-                ) && eval $TF_CMD;
-                unset TF_HISTORY;
-                export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
-                test -n "$TF_CMD" && print -s $TF_CMD
-            }
+# THE FUCK
+# eval
+#             fuck () {
+#                 TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+#                 export TF_SHELL=zsh;
+#                 export TF_ALIAS=fuck;
+#                 TF_SHELL_ALIASES=$(alias);
+#                 export TF_SHELL_ALIASES;
+#                 TF_HISTORY="$(fc -ln -10)";
+#                 export TF_HISTORY;
+#                 export PYTHONIOENCODING=utf-8;
+#                 TF_CMD=$(
+#                     thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+#                 ) && eval $TF_CMD;
+#                 unset TF_HISTORY;
+#                 export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+#                 test -n "$TF_CMD" && print -s $TF_CMD
+#             }
 
 alias ecrlogin='aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 833816692833.dkr.ecr.us-east-1.amazonaws.com'
 alias docks='docker ps --format "table {{.Names}}\t{{.Command}}\t{{.Status}}"'
 alias title_db='docker exec -it title_db mysql --port=3306 --user=root --password=test --host=title_db --database=title'
-alias nuke_local_title='mysql --user=root --password=mysqlpassword --execute="DROP DATABASE IF EXISTS title; CREATE DATABASE title;"'
-alias nuke_local_inspections='mysql --user=root --password=mysqlpassword --execute="DROP DATABASE IF EXISTS local_inspections_service; CREATE DATABASE local_inspections_service;"'
 alias guide='cat ~/Documents/guiding_principles.txt'
 alias gmd='git merge develop'
 
@@ -216,10 +211,6 @@ function dump_prod () {
      --skip-lock-tables \
      --column-statistics=0
 }
-
-alias gitback='git checkout -'
-
-alias flip='docker container restart inspections-service'
 
 alias cz='cat ~/.zshrc'
 
@@ -285,21 +276,20 @@ function c9_hash () {
     echo c63d7a6b | pbcopy
 }
 
-alias reset_lvl_db='python3 manage.py loaddata users tokens gamers game_types games events'
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Ruby shit to be removed when not needed
-eval "$(rbenv init - zsh)"
 
 alias inspections_db='docker exec -it inspections_db mysql --port=3306 --user=root --password=test --host=inspections_db --database=inspections'
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 alias vz="vim ~/.zshrc"
 alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
-alias c9='ssh cloud9'
 alias nut='pipenv shell'
+
+#######
+# SSH #
+#######
+alias cube='ssh lil_cube'
+alias c9='ssh cloud9'
 
 #################
 # Opening repos #
@@ -311,3 +301,4 @@ alias insvc="pycharm ~/BuiltSource/inspections-service"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+alias vi="nvim"
