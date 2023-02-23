@@ -46,7 +46,6 @@ alias gb='git checkout -b '
 alias gcom='git commit -m '
 alias gd='git branch -d '
 alias jserve='json-server -w $1 -p 8088'
-alias z='pmset displaysleepnow'
 alias cl='clear'
 alias pm='python3 manage.py'
 alias pms='python3 manage.py runserver'
@@ -102,6 +101,7 @@ export SHELL_SCRIPTS_PATH="$HOME/Documents/jetbrains_scripts"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$SHELL_SCRIPTS_PATH:$PATH"
 export PATH=$PATH:~/Learning/nand2tetris/tools
+export PATH=$PATH:~/.local/bin
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
