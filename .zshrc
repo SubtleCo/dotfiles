@@ -260,14 +260,14 @@ function today () {
     year=$(date +'%Y')
     month=$(date +'%m')
     file=$(date +'%d').txt
-    vim ~/Documents/the_daily_mail/$year/$month/$file
+    lvim ~/Documents/the_daily_mail/$year/$month/$file
 }
 
 function yest () {
     year=$(date +'%Y')
     month=$(date +'%m')
     file=$(gdate -d "1 day ago" +'%d').txt
-    vim ~/Documents/the_daily_mail/$year/$month/$file
+    lvim ~/Documents/the_daily_mail/$year/$month/$file
 }
 
 function envs () {
@@ -282,7 +282,7 @@ function c9_hash () {
 
 alias inspections_db='docker exec -it inspections_db mysql --port=3306 --user=root --password=test --host=inspections_db --database=inspections'
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-alias vz="vim ~/.zshrc"
+alias vz="lvim ~/.zshrc"
 alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
 alias wake_c9='aws ec2 start-instances --region us-east-1 --instance-id i-08d492748e3881d1c'
 alias nut='pipenv shell'
@@ -303,4 +303,4 @@ alias insvc="pycharm ~/BuiltSource/inspections-service"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-alias vi="nvim"
+alias vi="lvim"
