@@ -3,7 +3,7 @@
 #######
 plugins=(git)
 
-for conf in "$HOME/.config/zsh"*.zsh; do
+for conf in "$HOME/.config/zsh/"*.zsh; do
   source "${conf}"
 done
 unset conf
