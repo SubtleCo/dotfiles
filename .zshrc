@@ -8,7 +8,7 @@ for conf in "$HOME/.config/zsh/"*.zsh; do
 done
 unset conf
 
-ZSH_THEME=alex-half-life
+ZSH_THEME=alex-crowbar
 
 
 #############
