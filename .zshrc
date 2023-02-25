@@ -31,11 +31,10 @@ source $ZSH/oh-my-zsh.sh
 export JETBRAINS_SCRIPTS="$HOME/Documents/jetbrains_scripts"
 export PYENV_ROOT="$HOME/.pyenv"
 export MYSQL_5_7="/opt.homebrew/opt/mysql@5.7/bin"
-# export PYENV_ROOT="$HOME/.pyenv"
 export NAND_2_TETRIS="$HOME/Learning/nand2tetris/tools"
 
-export PATH=$PATH:~/.local/bin:$PYENV_ROOT/bin:JETBRAINS_SCRIPTS:NAND_2_TETRIS:MYSQL_5_7
-# export PATH="$PYENV_ROOT/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$PATH"
+# export PATH="$PATH:~/.local/bin:$PYENV_ROOT/bin:JETBRAINS_SCRIPTS:NAND_2_TETRIS:MYSQL_5_7"
+export PATH="$PYENV_ROOT/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$PATH"
 
 
 ##########
