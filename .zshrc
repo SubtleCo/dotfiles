@@ -33,7 +33,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export MYSQL_5_7="/opt.homebrew/opt/mysql@5.7/bin"
 export NAND_2_TETRIS="$HOME/Learning/nand2tetris/tools"
 
-export PATH="~/.local/bin:$PYENV_ROOT/bin:JETBRAINS_SCRIPTS:NAND_2_TETRIS:MYSQL_5_7:$PATH"
+export PATH="~/.local/bin:$PYENV_ROOT/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$PATH"
 # export PATH="$PYENV_ROOT/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$PATH"
 
 
