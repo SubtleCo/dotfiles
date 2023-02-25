@@ -8,6 +8,8 @@ for conf in "$HOME/.config/zsh/"*.zsh; do
 done
 unset conf
 
+ZSH_THEME=robbyrussell
+
 
 #############
 # OH MY ZSH #
