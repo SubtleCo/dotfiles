@@ -67,5 +67,9 @@ export NVM_DIR="$HOME/.nvm"
 alias cube='ssh lil_cube'
 alias c9='ssh cloud9'
 
-
+#######
+# Vim #
+#######
+alias vim="stty stop '' -ixoff; nvim"
+alias v="vim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
