@@ -70,6 +70,5 @@ alias c9='ssh cloud9'
 #######
 # Vim #
 #######
-alias vim="stty stop '' -ixoff; nvim"
-alias v="vim"
+alias v="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
