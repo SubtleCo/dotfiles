@@ -63,6 +63,7 @@ dap_python.setup("~/.local/share/virtualenvs/debugpy-1pX4fgu6/bin/python")
 vscode.load_launchjs()
 
 ```
+`dap-python` is super smart in that it will use the supplied environment to run `debugpy` but will also detect your current environment with the `VIRTUAL_ENV` environment variable to ensure you have access to all your cool packages etc.
 That last line is fucking magic. Rather than literally configuring every conceivable run configuration for all of your projects in one lua file, we get to use those `launch.json` files. Here's one that's tucked inside my work repo `inspections-service` at `inspections-service/.vscode/launch.json` because your name is Chaz and this is relevant to you (this is a sample for a very specific Flask project):
 ```
 {
@@ -89,10 +90,13 @@ That last line is fucking magic. Rather than literally configuring every conceiv
 }
 ```
 
-OK we should be done. Restart Neovim and try a few things:
+OK we should be done. Close Neovim, navigate to a python project, activate the shell (perhaps `pipenv shell`?) and enter Neovim again.
 
-1. Debug the app!
-For example, you wanna use Postman to hit an API endpoint and pause mid-way. Go to a line you want to pause at and insert a debug point (lots of packages map this to `<leader>db`): `:lua require('dap').toggle_breakpoint()`.  
-Now run the app with (often shortcut to `<leader>dc`) `:lua require'dap'.continue()` 
+1. Run/Debug the app!
+For example, you wanna use Postman to hit an API endpoint and pause mid-way. Go to a line you want to pause at and insert a debug point (lots of packages map this to `<leader>db`): `:lua require('dap').toggle_breakpoint()`.
+Now run the app with (often shortcut to `<leader>dc`) `:lua require('dap').continue()`  
 
+OK, so if you're `launch.json` is configured correctly (out of scope for this walkthrough), your app is running in debug mode. Hit that route in Postman and watch your new debugging IDE do its thing!
 
+2. Run/Debug a test!
+Go to a simple unit test that you know will pass. Run `:lua require('dap-python').test_method()`. I mapped that to `<leader>tt` for "run nearest test to cursor". You can drop a breakpoint like above to debug that test.
