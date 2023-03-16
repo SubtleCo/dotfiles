@@ -70,6 +70,12 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
+local function python_keymaps(bufnr)
+  local opts = { noremap = true, silent = true, desc = "butts" }
+  local keymap = vim.api.nvim_buf_set_keymap
+  keymap(bufnr, "n", "<leader>tt", "<cmd>lua require('dap-python').test_method()<cr>", opts)
+end
+
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
@@ -79,12 +85,22 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+  if client.name == "pyright" then
+    python_keymaps(bufnr)
+  end
+
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
 		return
 	end
 	illuminate.on_attach(client)
+end
+
+M.get_server_name = function(client, bufnr)
+  if client.name == "pyright" then
+    return true
+  end
 end
 
 return M

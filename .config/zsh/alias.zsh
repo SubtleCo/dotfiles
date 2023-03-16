@@ -21,7 +21,7 @@ alias gd='git branch -d '
 # ZSH #
 #######
 alias cz='cat ~/.zshrc'
-alias vz='lvim ~/.zshrc'
+alias vz='nvim ~/.zshrc'
 
 #########
 # SHELL #
@@ -29,7 +29,3 @@ alias vz='lvim ~/.zshrc'
 alias cl='clear'
 alias wipe='rm -rf'
 
-############
-# LUNARVIM #
-############
-alias v="lvim"

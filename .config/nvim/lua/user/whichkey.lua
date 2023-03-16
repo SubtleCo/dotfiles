@@ -14,9 +14,9 @@ local setup = {
     -- the presets plugin, adds help for a bunch of default keybindings in Neovim
     -- No actual key bindings are created
     presets = {
-      operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-      motions = false, -- adds help for motions
-      text_objects = false, -- help for text objects triggered after entering an operator
+      operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+      motions = true, -- adds help for motions
+      text_objects = true, -- help for text objects triggered after entering an operator
       windows = true, -- default bindings on <c-w>
       nav = true, -- misc bindings to work with windows
       z = true, -- bindings for folds, spelling and others prefixed with z
@@ -116,7 +116,7 @@ local mappings = {
   v = { "<cmd>vsplit<cr>", "vsplit" },
   h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
-  -- h = { "<cmd>nohlsearch<CR>", "No HL" },
+  n = { "<cmd>nohlsearch<CR>", "No HL" },
   q = { '<cmd>:q<CR>', "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -202,7 +202,7 @@ local mappings = {
     },
     f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    -- h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", "Toggle Hints" },
+    h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", "Toggle Hints" },
     I = { "<cmd>LspInstallInfo<cr>", "Mason Info" },
     j = {
       "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
@@ -222,16 +222,6 @@ local mappings = {
     },
     u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
-
-  t = {
-    name = "Test",
-    t = { "<cmd>TestNearest --verbose<cr>", "Test Nearest"},
-    c = { "<cmd>TestClass<cr>", "Test Class (Python)"},
-    f = { "<cmd>TestFile<cr>", "Test Fil"},
-    a = { "<cmd>TestSuite<cr>", "Test Suit"},
-    l = { "<cmd>TestLast<cr>", "Test Last"},
-    g = { "<cmd>TestVisit<cr>", "Go back to last test fil"},
-  }
 }
 
 local vopts = {
@@ -247,6 +237,7 @@ local vmappings = {
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
+
 
 wk.setup(setup)
 wk.register(mappings, opts)

@@ -3,20 +3,28 @@ if not dap_status_ok then
   return
 end
 
+local vscode_ok, vscode = pcall(require, "dap.ext.vscode")
+if not vscode_ok then
+  return
+end
+
 local dap_ui_status_ok, dapui = pcall(require, "dapui")
 if not dap_ui_status_ok then
   return
 end
 
-local dap_install_status_ok, dap_install = pcall(require, "dap-install")
-if not dap_install_status_ok then
+local dap_python_status_ok, dap_python = pcall(require, "dap-python")
+if not dap_python_status_ok then
   return
 end
 
-dap_install.setup {}
+-- set pytest as desired test runner
+dap_python.test_runner = "pytest"
+-- Install an environment with debugpy and point to the binary
+dap_python.setup("~/.local/share/virtualenvs/debugpy-1pX4fgu6/bin/python")
+-- rather than dump a bunch of configs here, use the .vscode/launch.json file in the repo to provide launch options
+vscode.load_launchjs()
 
-dap_install.config("python", {})
--- add other configs here
 
 dapui.setup {
   expand_lines = true,
@@ -61,6 +69,8 @@ dapui.setup {
 }
 
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
+
+dap.set_log_level("TRACE")
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()

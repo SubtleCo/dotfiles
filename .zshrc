@@ -38,6 +38,7 @@ export PATH="$HOME/.local/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$PATH
 ##########
 # PYTHON #
 ##########
+
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
