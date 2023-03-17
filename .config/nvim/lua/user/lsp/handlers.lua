@@ -73,12 +73,26 @@ end
 local function python_keymaps(bufnr)
   local opts = { noremap = true, silent = true, desc = "butts" }
   local keymap = vim.api.nvim_buf_set_keymap
-  keymap(bufnr, "n", "<leader>tt", "<cmd>lua require('dap-python').test_method()<cr>", opts)
+  keymap(bufnr, "n", "<leader>tt", "<cmd>lua require('dap-python').test_method()<cr>", opts) -- runs in debug mode by default
+  keymap(bufnr, "n", "<leader>tf", "<cmd>lua require('dap-python').test_class()<cr>", opts)
+  -- Currently no run_file command. That would be a cool contribution.
+end
+
+local function typescript_keymaps(bufnr)
+  local opts = { noremap = true, silent = true, desc = "TS butts" }
+  local keymap = vim.api.nvim_buf_set_keymap
+  keymap(bufnr, "n", "<leader>tt", "<cmd>lua require('jester').run()<cr>", opts)
+  keymap(bufnr, "n", "<leader>td", "<cmd>lua require('jester').debug()<cr>", opts)
+  keymap(bufnr, "n", "<leader>tD", "<cmd>lua require('jester').debug_last()<cr>", opts)
+  keymap(bufnr, "n", "<leader>tf", "<cmd>lua require('jester').run_file()<cr>", opts)
+  keymap(bufnr, "n", "<leader>tF", "<cmd>lua require('jester').debug_file()<cr>", opts)
+  keymap(bufnr, "n", "<leader>tl", "<cmd>lua require('jester').run_last()<cr>", opts)
 end
 
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
+    typescript_keymaps(bufnr)
 	end
 
 	if client.name == "sumneko_lua" then
