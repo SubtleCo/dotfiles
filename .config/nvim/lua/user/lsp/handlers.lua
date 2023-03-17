@@ -74,7 +74,7 @@ local function python_keymaps(bufnr)
   local opts = { noremap = true, silent = true, desc = "butts" }
   local keymap = vim.api.nvim_buf_set_keymap
   keymap(bufnr, "n", "<leader>tt", "<cmd>lua require('dap-python').test_method()<cr>", opts) -- runs in debug mode by default
-  keymap(bufnr, "n", "<leader>tf", "<cmd>lua require('dap-python').test_class()<cr>", opts)
+  keymap(bufnr, "n", "<leader>td", "<cmd>lua require('dap-python').test_method()<cr>", opts) -- runs in debug mode by default
   -- Currently no run_file command. That would be a cool contribution.
 end
 

@@ -222,6 +222,17 @@ local mappings = {
     },
     u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
+
+  t = {
+    name = "Test",
+    t = { nil, "Test Current Func/Method"},
+    d = { nil, "Debug Curent Func/Method"},
+    f = { nil, "Test File (Node)"},
+    D = { nil, "Debug Last (Node)"},
+    F = { nil, "Debug File (Node)"},
+    l = { nil, "Run Last (Node)"}
+
+  }
 }
 
 local vopts = {
