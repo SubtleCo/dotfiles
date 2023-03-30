@@ -91,6 +91,24 @@ function c9_hash () {
     echo "c63d7a6b" | pbcopy
 }
 
+# Opening repos in nvim
+function app () {
+  cd ~/BuiltSource/inspections-miniapp
+  nvim . 
+}
+
+function pap () {
+  cd ~/BuiltSource/inspections-product-api
+  nvim .
+}
+
+function ser () {
+  cd ~/BuiltSource/inspections-service/
+  pipenv shell
+  nvim .
+}
+
+
 
 ###########
 # ALIASES #
