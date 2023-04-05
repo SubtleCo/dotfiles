@@ -104,8 +104,7 @@ function pap () {
 
 function ser () {
   cd ~/BuiltSource/inspections-service/
-  pipenv shell
-  nvim .
+  pipenv shell && nvim .
 }
 
 

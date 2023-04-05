@@ -29,3 +29,11 @@ alias vz='nvim ~/.zshrc'
 alias cl='clear'
 alias wipe='rm -rf'
 
+########
+# TMUX #
+########
+alias t='tmux'
+alias ta='tmux attach -t '
+alias tl='tmux ls'
+alias tk='tmux kill-session -t '
+
