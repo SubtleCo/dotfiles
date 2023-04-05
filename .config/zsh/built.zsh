@@ -17,6 +17,8 @@ function integ () {
 # AWS RDS credentials
 alias prod_db='awslogin -db=prod-cla-soa-us-east-1 prod-support'
 alias prod_bapi_db='awslogin -db=prod-cla-bapi-replica-us-east-1 prod-support'
+alias staging_db='awslogin -db=staging-cla-soa-us-east-1 aws-developer'
+alias staging_bapi_db='awslogin -db=staging-cla-bapi-us-east-1 aws-developer'
 alias ops_bapi_db='awslogin -db=ops-cla-bapi-us-east-1 aws-developer'
 alias ops_db='awslogin -db=ops-cla-soa-us-east-1 aws-developer'
 alias dev_db='awslogin -db=dev-cla-soa-us-east-1 aws-developer'
