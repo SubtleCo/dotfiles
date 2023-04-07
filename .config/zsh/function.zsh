@@ -19,7 +19,7 @@ in () {
 alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
 function sz () {
     source ~/.zshrc
-    config add ~/.config/zsh ~/.config/nvim ~/.config/tmux
+    config add ~/.zshrc ~/.config/zsh ~/.config/nvim ~/.config/tmux
     ron_quote=$(curl http://ron-swanson-quotes.herokuapp.com/v2/quotes)
     parsed_quote=$(echo "$ron_quote" | sed 's/[]"[]//g')
     config commit -m "$parsed_quote"
