@@ -121,6 +121,8 @@ local mappings = {
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  -- toggle relative line numbers with .
+  ["."] = { "<cmd>set invrelativenumber!<CR>", "Toggle Relative Numbers" },
 
   ["gy"] = "Link",
 
