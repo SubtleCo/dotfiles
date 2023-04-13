@@ -14,7 +14,16 @@ telescope.setup {
     file_ignore_patterns = { ".git/", "node_modules" },
 
     mappings = {
+      n = {
+        ["<C-d>"] = actions.delete_buffer,
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+        ["<C-s>"] = actions.select_horizontal,
+        ["<C-v>"] = actions.select_vertical,
+        ["<C-x>"] = actions.select_tab,
+        ["<Esc>"] = actions.close,
+      },
       i = {
+        ["<C-d>"] = actions.delete_buffer,
         ["<Down>"] = actions.cycle_history_next,
         ["<Up>"] = actions.cycle_history_prev,
         ["<C-j>"] = actions.move_selection_next,
