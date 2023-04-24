@@ -124,6 +124,12 @@ function prod_extract_loan() {
     mv $HOME/.built/cache/$1.sql $HOME/BuiltSource/prod-extracts/$1.sql
 }
 
+function prod_extract_lender() {
+    cd $HOME/BuiltSource/case_sensitive/built-tools
+    ./bin/built extract lender $1 -o "$1.sql"
+    mv $HOME/.built/cache/$1.sql $HOME/BuiltSource/prod-extracts/$1.sql
+}
+
 function prod_extract_user() {
     cd $HOME/BuiltSource/case_sensitive/built-tools
     ./bin/built extract user $1 -o "$1.sql"
