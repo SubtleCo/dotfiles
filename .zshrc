@@ -34,7 +34,8 @@ export NAND_2_TETRIS="$HOME/Learning/nand2tetris/tools"
 export TMUX_SCRIPTS="$HOME/.config/tmux/scripts"
 export SCRIPTS="$HOME/.config/scripts"
 
-export PATH="$HOME/.local/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
+# export PATH="$HOME/.local/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
+export PATH="$HOME/.local/bin:$NAND_2_TETRIS:$MYSQL_5_7:$SCRIPTS:$PATH"
 
 
 ##########
