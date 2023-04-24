@@ -38,7 +38,7 @@ alias tl='tmux ls'
 alias tk='tmux kill-session -t '
 alias tn='tmux new-session -s '
 
-*******
-* K8s *
-*******
+#######
+# K8s #
+#######
 alias k='kubectl'
