@@ -36,7 +36,7 @@ export SCRIPTS="$HOME/.config/scripts"
 export PYENV="$HOME/.pyenv/bin"
 
 # export PATH="$HOME/.local/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
-export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$MYSQL_5_7:$SCRIPTS:$PATH"
+export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
 
 
 ##########
