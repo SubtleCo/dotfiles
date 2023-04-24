@@ -79,3 +79,5 @@ alias c9='ssh cloud9'
 alias v="nvim"
 alias pv="pipenv run nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
