@@ -49,3 +49,15 @@ function yest () {
     file=$(gdate -d "1 day ago" +'%d').txt
     lvim ~/Documents/the_daily_mail/$year/$month/$file
 }
+
+navi() {
+  # Set the API key environment variable
+  source "$HOME/.config/.env"
+  
+  # Get the prompt from the first argument
+  prompt="$1"
+
+  # Run the cURL command to generate a completion
+  curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $OPENAI_API_KEY" -d "{\"model\": \"davinci-codex\", \"prompt\": \"$prompt\", \"max_tokens\": 10}" https://api.openai.com/v1/engines/davinci-codex/completions
+}
+
