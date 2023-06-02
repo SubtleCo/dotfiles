@@ -103,6 +103,10 @@ M.on_attach = function(client, bufnr)
     python_keymaps(bufnr)
   end
 
+  if client.name == "clangd" then
+    client.offset_encoding = 'utf-16'
+  end
+
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then

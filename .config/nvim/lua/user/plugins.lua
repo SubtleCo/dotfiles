@@ -59,17 +59,17 @@ return packer.startup(function(use)
   use { "lewis6991/impatient.nvim", commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
-  use { 
-  
+  use {
+
     "folke/which-key.nvim",
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
-    end
+    end,
   }
   use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
   use { "github/copilot.vim" }
-  use { "christoomey/vim-tmux-navigator"}
+  use { "christoomey/vim-tmux-navigator" }
   use { "sindrets/diffview.nvim" }
 
   -- Colorschemes
@@ -115,12 +115,12 @@ return packer.startup(function(use)
   -- Debuggers
   use { "mfussenegger/nvim-dap-python" } -- Run/Debug a python app with launch.json
   use { "David-Kunz/jester" } -- Run/Debug Jest tests
-  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} } -- Run/Debug a node app
+  use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } } -- Run/Debug a node app
   use {
-  "microsoft/vscode-js-debug",
-  opt = true,
-  run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out" 
-}
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

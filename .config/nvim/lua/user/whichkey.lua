@@ -248,6 +248,7 @@ local vopts = {
 local vmappings = {
   ["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
+  y = { "ygv<ESC>", "Yank n stay" }
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 

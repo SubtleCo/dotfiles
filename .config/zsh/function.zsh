@@ -50,14 +50,14 @@ function yest () {
     lvim ~/Documents/the_daily_mail/$year/$month/$file
 }
 
-navi() {
-  # Set the API key environment variable
-  source "$HOME/.config/.env"
-  
-  # Get the prompt from the first argument
-  prompt="$1"
-
-  # Run the cURL command to generate a completion
-  curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $OPENAI_API_KEY" -d "{\"model\": \"davinci-codex\", \"prompt\": \"$prompt\", \"max_tokens\": 10}" https://api.openai.com/v1/engines/davinci-codex/completions
+function navi() {
+  thing=$1
+    curl -s https://api.openai.com/v1/chat/completions \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $OPENAI_API_KEY" \
+      -d '{
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": "'"$thing"'"}]
+      }' | jq -r '.choices[0].message.content'
 }
 

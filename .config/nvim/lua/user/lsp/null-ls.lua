@@ -10,7 +10,7 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- https://github.com/prettier-solidity/prettier-plugin-solidity
 null_ls.setup {
-  debug = false,
+  debug = true,
   sources = {
     formatting.prettier.with {
       extra_filetypes = { "toml" },
@@ -18,10 +18,13 @@ null_ls.setup {
     formatting.black,
     formatting.stylua,
     formatting.google_java_format,
+    formatting.clang_format,
+    diagnostics.clang_check,
     diagnostics.flake8.with {
       extra_args = {
         "--max-line-length=120",
-        "--ignore=W391"
+        "--ignore=W391",
+      },
     },
   },
-}}
+}

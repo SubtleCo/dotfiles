@@ -56,6 +56,7 @@ keymap("i", "<S-CR>", "<ESC>o", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+keymap("v", "<leader>y", "ygv<ESC>", opts)
 
 -- Plugins --
 
