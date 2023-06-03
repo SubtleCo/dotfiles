@@ -43,3 +43,4 @@ alias tn='tmux new-session -s '
 #######
 alias k='kubectl'
 alias dr='docker run'
+alias ds='docker start'
