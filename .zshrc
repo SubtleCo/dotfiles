@@ -28,7 +28,6 @@ source $ZSH/oh-my-zsh.sh
 # PATH #
 ########
 
-export LLVM="/opt/homebrew/opt/llvm/bin"
 export JETBRAINS_SCRIPTS="$HOME/Documents/jetbrains_scripts"
 export MYSQL_5_7="/opt.homebrew/opt/mysql@5.7/bin"
 export NAND_2_TETRIS="$HOME/Learning/nand2tetris/tools"
@@ -36,8 +35,7 @@ export TMUX_SCRIPTS="$HOME/.config/tmux/scripts"
 export SCRIPTS="$HOME/.config/scripts"
 export PYENV="$HOME/.pyenv/bin"
 
-# export PATH="$HOME/.local/bin:$JETBRAINS_SCRIPTS:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
-export PATH="$LLVM:$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
+export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$MYSQL_5_7:$TMUX_SCRIPTS:$SCRIPTS:$PATH"
 
 
 ##########

@@ -68,7 +68,7 @@ return packer.startup(function(use)
     end,
   }
   use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
-  use { "github/copilot.vim" }
+  -- use { "github/copilot.vim" }
   use { "christoomey/vim-tmux-navigator" }
   use { "sindrets/diffview.nvim" }
 

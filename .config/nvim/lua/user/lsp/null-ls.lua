@@ -17,8 +17,6 @@ null_ls.setup {
     },
     formatting.black,
     formatting.stylua,
-    formatting.google_java_format,
-    formatting.clang_format,
     diagnostics.clang_check,
     diagnostics.flake8.with {
       extra_args = {
