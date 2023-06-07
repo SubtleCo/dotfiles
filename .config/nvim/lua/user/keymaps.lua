@@ -50,6 +50,7 @@ keymap("v", "<C-s>", ":w<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 -- New line below regardless of position
+keymap("i", "jj", "<ESC>o", opts)
 keymap("i", "<S-CR>", "<ESC>o", opts)
 
 -- Visual --

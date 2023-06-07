@@ -117,7 +117,7 @@ local mappings = {
   h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
   n = { "<cmd>nohlsearch<CR>", "No HL" },
-  q = { '<cmd>:q<CR>', "Quit" },
+  q = { "<cmd>:q<CR>", "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -125,7 +125,6 @@ local mappings = {
   ["."] = { "<cmd>set invrelativenumber!<CR>", "Toggle Relative Numbers" },
 
   ["gy"] = "Link",
-
 
   p = {
     name = "Packer",
@@ -138,8 +137,8 @@ local mappings = {
 
   o = {
     name = "Options",
-    c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
-    C = { '<cmd>lua vim.g.cmp_active=true<cr>', "Completion on" },
+    c = { "<cmd>lua vim.g.cmp_active=false<cr>", "Completion off" },
+    C = { "<cmd>lua vim.g.cmp_active=true<cr>", "Completion on" },
   },
 
   d = {
@@ -227,14 +226,18 @@ local mappings = {
 
   t = {
     name = "Test",
-    t = { nil, "Test Current Func/Method"},
-    d = { nil, "Debug Curent Func/Method"},
-    f = { nil, "Test File (Node)"},
-    D = { nil, "Debug Last (Node)"},
-    F = { nil, "Debug File (Node)"},
-    l = { nil, "Run Last (Node)"}
+    t = { nil, "Test Current Func/Method" },
+    d = { nil, "Debug Curent Func/Method" },
+    f = { nil, "Test File (Node)" },
+    D = { nil, "Debug Last (Node)" },
+    F = { nil, "Debug File (Node)" },
+    l = { nil, "Run Last (Node)" },
+  },
 
-  }
+  s = {
+    name = "Snippets",
+    i = { "<cmd>:r ~/.config/nvim/snippits/c/stdio.c<cr>", "stdio" },
+  },
 }
 
 local vopts = {
@@ -248,10 +251,9 @@ local vopts = {
 local vmappings = {
   ["/"] = { '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>', "Comment" },
   s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
-  y = { "ygv<ESC>", "Yank n stay" }
+  y = { "ygv<ESC>", "Yank n stay" },
   -- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
-
 
 wk.setup(setup)
 wk.register(mappings, opts)

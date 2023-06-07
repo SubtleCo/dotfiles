@@ -17,7 +17,7 @@ null_ls.setup {
     },
     formatting.black,
     formatting.stylua,
-    diagnostics.clang_check,
+    -- diagnostics.clang_check,
     diagnostics.flake8.with {
       extra_args = {
         "--max-line-length=120",
