@@ -29,18 +29,14 @@ node
 - `nvm install v20.5.0` or something
 - `npm i -g neovim` (node support for neovim)
 
-### Alfred 4
-    - Key in email
-    - https://www.alfredapp.com/help/v4/
-### Oh My Zsh
-    - https://ohmyz.sh/#install
-### Nerdfont
-    - https://github.com/ronniedroid/getnf
+### [Alfred 4](https://www.alfredapp.com/help/v4/)
+- Key in email
+### [Oh My Zsh](https://ohmyz.sh/#install)
+### [Nerdfont](https://github.com/ronniedroid/getnf)
     - Install jetbrains mono (run getnf)
 
 ### GitHub ssh
     - ssh-keygen -t ed25519 -C "raymond.alex.martin@gmail.com"
     - Add to Github
 
-### Dotfiles - follow atlassian blog instructions carefully
-- https://www.atlassian.com/git/tutorials/dotfiles
+### Dotfiles - follow [atlassian blog instructions](https://www.atlassian.com/git/tutorials/dotfiles)https://www.atlassian.com/git/tutorials/dotfiles carefully
