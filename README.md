@@ -39,4 +39,4 @@ node
     - ssh-keygen -t ed25519 -C "raymond.alex.martin@gmail.com"
     - Add to Github
 
-### Dotfiles - follow [atlassian blog instructions](https://www.atlassian.com/git/tutorials/dotfiles)https://www.atlassian.com/git/tutorials/dotfiles carefully
+### Dotfiles - follow [atlassian blog instructions](https://www.atlassian.com/git/tutorials/dotfiles) carefully
