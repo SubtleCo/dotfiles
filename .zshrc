@@ -14,14 +14,8 @@ ZSH_THEME=alex-crowbar
 #############
 # OH MY ZSH #
 #############
-export ZSH="/Users/alex.martin/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-
-
-#####
-# z #
-#####
-. /opt/homebrew/etc/profile.d/z.sh
 
 
 ########
@@ -79,5 +73,4 @@ alias v="nvim"
 alias pv="pipenv run nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 alias dot="v ~/.config"

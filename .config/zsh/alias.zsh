@@ -28,6 +28,7 @@ alias vz='nvim ~/.zshrc'
 #########
 alias cl='clear'
 alias wipe='rm -rf'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 ########
 # TMUX #

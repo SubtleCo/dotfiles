@@ -105,7 +105,7 @@ M.on_attach = function(client, bufnr)
 
   if client.name == "clangd" then
     client.offset_encoding = "utf-8"
-    local notify = vim.nofity
+    local notify = vim.notify
     vim.notify = function(msg, ...)
       if msg:match "warning: multiple different client offset_encodings" then
         return
@@ -122,7 +122,19 @@ M.on_attach = function(client, bufnr)
   illuminate.on_attach(client)
 end
 
-M.get_server_name = function(client, bufnr)
+M.settings = function(client, _)
+  if client.name == "gopls" then
+    return {
+      gopls =
+    {
+      completeUnimported = true,
+      usePlaceholders = true,
+    }}
+  end
+  return {}
+end
+
+M.get_server_name = function(client, _)
   if client.name == "pyright" then
     return true
   end

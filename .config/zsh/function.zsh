@@ -16,7 +16,6 @@ in () {
 }
 
 
-alias config='/usr/bin/git --git-dir=/Users/alex.martin/.cfg/ --work-tree=/Users/alex.martin'
 function sz () {
     source ~/.zshrc
     config add ~/.zshrc ~/.config/zsh ~/.config/nvim ~/.config/tmux
