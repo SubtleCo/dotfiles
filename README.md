@@ -4,7 +4,7 @@ save em up
 ## New Computer Setup
 
 ### homebrew
-https://brew.sh
+https://brew.sh  
 `brew install`
 - `—cask rectangle`
 - `—cask iterm2`
