@@ -60,3 +60,16 @@ function navi() {
       }' | jq -r '.choices[0].message.content'
 }
 
+########
+# SYNE #
+########
+
+function refresh_spotify_token() {
+  curl -X POST "https://accounts.spotify.com/api/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "client_id=$SPOTIFY_CLIENT_ID" \
+    -d "client_secret=$SPOTIFY_CLIENT_SECRET" \
+    -d "grant_type=refresh_token" \
+    -d "refresh_token=$REFRESH_TOKEN"
+}
+
