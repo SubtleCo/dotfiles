@@ -46,3 +46,9 @@ alias k='kubectl'
 alias dr='docker run'
 alias ds='docker start'
 alias ipy='ipython'
+
+########
+# SYNE #
+########
+alias syne1='ssh syne@192.168.6.230'
+alias syne2='ssh syne@192.168.7.78'
