@@ -73,3 +73,18 @@ function refresh_spotify_token() {
     -d "refresh_token=$SPOTIFY_REFRESH_TOKEN"
 }
 
+function get_spotify_app_token() {
+  curl -X POST "https://accounts.spotify.com/api/token" \
+   -H "Content-Type: application/x-www-form-urlencoded" \
+   -d "grant_type=client_credentials&client_id=$SPOTIFY_CLIENT_ID&client_secret=$SPOTIFY_CLIENT_SECRET"
+}
+
+function get_spotify_uat() {
+  curl -s -X POST "https://accounts.spotify.com/api/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -d "client_id=$SPOTIFY_CLIENT_ID" \
+    -d "client_secret=$SPOTIFY_CLIENT_SECRET" \
+    -d "grant_type=authorization_code" \
+    -d "code=$SPOTIFY_AUTH_CODE" \
+    -d "redirect_uri=$SPOTIFY_REDIRECT_URI"
+}
