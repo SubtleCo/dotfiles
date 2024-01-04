@@ -32,7 +32,7 @@ export TMUX_SCRIPTS="$HOME/.config/tmux/scripts"
 export SCRIPTS="$HOME/.config/scripts"
 export PYENV="$HOME/.pyenv/bin"
 
-export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$TMUX_SCRIPTS:$SCRIPTS:$PATH:$HOME/go/bin"
+export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$TMUX_SCRIPTS:$SCRIPTS:$PATH:$HOME/go/bin:$HOME/development/flutter/bin"
 
 
 ##########
