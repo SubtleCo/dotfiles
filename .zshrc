@@ -79,3 +79,4 @@ alias pv="pipenv run nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias dot="v ~/.config"
+alias linux='qemu-system-aarch64 -monitor stdio -M virt,highmem=off -accel hvf -cpu host -smp 4 -m 3000 -bios QEMU_EFI.fd -device virtio-gpu-pci -display default,show-cursor=on -device qemu-xhci -device usb-kbd -device usb-tablet -drive file=ubuntu-again.raw,format=raw,if=virtio,cache=writethrough'
