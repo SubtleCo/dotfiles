@@ -59,6 +59,7 @@ export LC_CTYPE="en_US.UTF-8"
 # Postgres #
 ############
 export LD_LIBRARY_PATH=/usr/local/pgsql/lib
+export PATH="/usr/local/pgsql/bin:$PATH"
 
 
 #######
