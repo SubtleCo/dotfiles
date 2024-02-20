@@ -28,3 +28,7 @@ configs.setup {
     enable_autocmd = false,
   },
 }
+
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.wo.foldenable = false -- This disables folding at startup.
