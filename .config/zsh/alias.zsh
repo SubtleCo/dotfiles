@@ -55,3 +55,9 @@ alias syne2='ssh syne@192.168.7.78'
 alias syne3='ssh syne@192.168.7.97'
 alias dynamo='java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
 alias sso="aws sso login"
+
+###########
+# journal #
+###########
+alias journal='cd ~/Documents/journal && vim "$(date +%Y-%m-%d).txt"'
+
