@@ -59,5 +59,5 @@ alias sso="aws sso login"
 ###########
 # journal #
 ###########
-alias journal='cd ~/Documents/journal && vim "$(date +%Y-%m-%d).txt"'
+alias journal='cd ~/Documents/journal && nvim "$(date +%Y-%m-%d).txt"'
 
