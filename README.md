@@ -5,15 +5,13 @@ save em up
 
 ### [homebrew](https://brew.sh)
 `brew install`
-- `—cask rectangle`
-- `—cask iterm2`
+- `rectangle`
+- `iterm2`
 - `pyenv`
 - `tmux`
-- `nvm`
 - `go`
 - `neovim`
 - `ripgrep`
-
 
 `pyenv`
 - `install 3.11.4` or something
@@ -26,14 +24,17 @@ save em up
 - `pynvim`
 
 node
+- install nvm from site
 - `nvm install v20.5.0` or something
 - `npm i -g neovim` (node support for neovim)
 
 ### [Alfred 4](https://www.alfredapp.com/help/v4/)
-- Key in email
+    - Key in email
 ### [Oh My Zsh](https://ohmyz.sh/#install)
+    - cp alex-crowbar.zsh-theme ~/.oh-my-zsh/themes
 ### [Nerdfont](https://github.com/ronniedroid/getnf)
     - Install jetbrains mono (run getnf)
+    - Set font in iTerm2 Preferences > Profiles > Text
 
 ### GitHub ssh
     - ssh-keygen -t ed25519 -C "raymond.alex.martin@gmail.com"
