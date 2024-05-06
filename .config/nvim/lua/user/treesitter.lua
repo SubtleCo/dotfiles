@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+local status_ok, configs = pcall(require, "ts_context_commentstring")
 if not status_ok then
   return
 end
@@ -23,10 +23,7 @@ configs.setup {
   },
   indent = { enable = true, disable = { "python", "css" } },
 
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
+  context_commentstring = nil
 }
 
 vim.wo.foldmethod = "expr"

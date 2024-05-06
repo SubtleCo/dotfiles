@@ -16,16 +16,16 @@ null_ls.setup {
     formatting.prettier.with {
       extra_filetypes = { "toml" },
     },
-    formatting.black,
+    formatting.ruff,
     formatting.gofumpt,
     formatting.goimports_reviser,
     formatting.stylua,
-    diagnostics.flake8.with {
-      extra_args = {
-        "--max-line-length=120",
-        "--ignore=W391",
-      },
-    },
+    -- diagnostics.flake8.with {
+    --   extra_args = {
+    --     "--max-line-length=120",
+    --     "--ignore=W391",
+    --   },
+    -- },
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
