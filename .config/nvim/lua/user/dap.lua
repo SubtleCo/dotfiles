@@ -27,7 +27,7 @@ end
 -- set pytest as desired test runner
 dap_python.test_runner = "pytest"
 -- Install an environment with debugpy and point to the binary
-dap_python.setup("~/.local/share/virtualenvs/debugpy-1pX4fgu6/bin/python")
+dap_python.setup("~/.virtualenvs/debugpy/bin/python")
 -- rather than dump a bunch of configs here, use the .vscode/launch.json file in the repo to provide launch options
 
 -----------------------------
