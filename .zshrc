@@ -81,7 +81,7 @@ alias c9='ssh cloud9'
 # Vim #
 #######
 alias v="nvim"
-alias pv="pipenv run nvim"
+alias pv="poetry run nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias dot="v ~/.config"
