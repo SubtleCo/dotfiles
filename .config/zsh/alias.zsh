@@ -61,3 +61,4 @@ alias sso="aws sso login"
 ###########
 alias journal='cd ~/Documents/journal && nvim "$(date +%Y-%m-%d).txt"'
 
+alias ohya="git commit --amend --no-edit"

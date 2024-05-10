@@ -1,5 +1,6 @@
 local dap_status_ok, dap = pcall(require, "dap")
 if not dap_status_ok then
+  print("uh oh")
   return
 end
 
@@ -29,6 +30,15 @@ dap_python.test_runner = "pytest"
 -- Install an environment with debugpy and point to the binary
 dap_python.setup("~/.virtualenvs/debugpy/bin/python")
 -- rather than dump a bunch of configs here, use the .vscode/launch.json file in the repo to provide launch options
+dap.configurations.python = {
+		{
+			type = 'python';
+			request = 'launch';
+			name = "Test File";
+			module = "pytest";
+			args = {"${file}"};
+		}
+	}
 
 -----------------------------
 -- JavaScript & TypeScript --
@@ -43,6 +53,8 @@ local jester_ok, jester = pcall(require, "jester")
 if not jester_ok then
   return
 end
+
+
 
 dap_js.setup({
   -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"

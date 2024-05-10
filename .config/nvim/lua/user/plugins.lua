@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use { "JoosepAlviste/nvim-ts-context-commentstring"}
   use { "kyazdani42/nvim-web-devicons"}
   use { "kyazdani42/nvim-tree.lua"}
-  -- use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" } -- File tabs above everything. I opted for winbar instead.
   use { "moll/vim-bbye"}
   use { "nvim-lualine/lualine.nvim"}
   use { "akinsho/toggleterm.nvim"}
@@ -113,13 +112,13 @@ return packer.startup(function(use)
 
   -- Debuggers
   use { "mfussenegger/nvim-dap-python" } -- Run/Debug a python app with launch.json
-  use { "David-Kunz/jester" } -- Run/Debug Jest tests
-  use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } } -- Run/Debug a node app
-  use {
-    "microsoft/vscode-js-debug",
-    opt = true,
-    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
-  }
+  -- use { "David-Kunz/jester" } -- Run/Debug Jest tests
+  -- use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } } -- Run/Debug a node app
+  -- use {
+  --   "microsoft/vscode-js-debug",
+  --   opt = true,
+  --   run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+  -- }
 
   -- Flutter
   use {
