@@ -17,6 +17,10 @@ ZSH_THEME=alex-crowbar
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
+###########
+# THEFUCK #
+###########
+eval $(thefuck --alias)
 
 ##########
 # direnv #
