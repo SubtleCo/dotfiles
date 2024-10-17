@@ -4,10 +4,10 @@ if not dap_status_ok then
   return
 end
 
-local vscode_ok, vscode = pcall(require, "dap.ext.vscode")
-if not vscode_ok then
-  return
-end
+-- local vscode_ok, vscode = pcall(require, "dap.ext.vscode")
+-- if not vscode_ok then
+--   return
+-- end
 
 local dap_ui_status_ok, dapui = pcall(require, "dapui")
 if not dap_ui_status_ok then
@@ -22,6 +22,7 @@ end
 
 local dap_python_status_ok, dap_python = pcall(require, "dap-python")
 if not dap_python_status_ok then
+  print("uh oh, no dap-python")
   return
 end
 

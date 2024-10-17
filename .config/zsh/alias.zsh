@@ -56,6 +56,13 @@ alias syne3='ssh syne@192.168.7.97'
 alias dynamo='java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb'
 alias sso="aws sso login"
 
+##########
+# DOCKER #
+##########
+
+alias dk='docker stop $(docker ps -q)'
+alias dp='docker system prune -a'
+
 ###########
 # journal #
 ###########

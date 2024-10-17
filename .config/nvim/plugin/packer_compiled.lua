@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/martina/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["fugitive.git"] = {
+    loaded = true,
+    path = "/Users/martina/.local/share/nvim/site/pack/packer/start/fugitive.git",
+    url = "https://tpope.io/vim/fugitive"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/martina/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

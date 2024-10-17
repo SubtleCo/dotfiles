@@ -31,7 +31,6 @@ eval "$(direnv hook zsh)"
 # PATH #
 ########
 
-export NAND_2_TETRIS="$HOME/Learning/nand2tetris/tools"
 export TMUX_SCRIPTS="$HOME/.config/tmux/scripts"
 export SCRIPTS="$HOME/.config/scripts"
 export PYENV="$HOME/.pyenv/bin"
@@ -44,7 +43,6 @@ export PATH="$HOME/.local/bin:$PYENV:$NAND_2_TETRIS:$TMUX_SCRIPTS:$SCRIPTS:$PATH
 ##########
 
 export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv init --path)"
 
@@ -58,6 +56,10 @@ fi
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
+
+# Default to ipdb when debugging pytest
+# export PYTEST_ADDOPTS='--pdb --pdbcls=IPython.terminal.debugger:Pdb'
+
 
 ############
 # Postgres #
@@ -90,3 +92,19 @@ alias pv="poetry run nvim"
 
 alias dot="v ~/.config"
 alias linux='qemu-system-aarch64 -monitor stdio -M virt,highmem=off -accel hvf -cpu host -smp 4 -m 3000 -bios /Users/a_mart/qemu/QEMU_EFI.fd -device virtio-gpu-pci -display default,show-cursor=on -device qemu-xhci -device usb-kbd -device usb-tablet -drive file=/Users/a_mart/qemu/ubuntu-again.raw,format=raw,if=virtio,cache=writethrough -net nic -net user,hostfwd=tcp::2222-:22'
+
+########
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+
+export RSI_HOME="/Users/martina/Riverside"
+
+
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+
+
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit

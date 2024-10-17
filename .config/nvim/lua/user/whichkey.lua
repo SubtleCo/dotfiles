@@ -116,6 +116,7 @@ local mappings = {
   v = { "<cmd>vsplit<cr>", "vsplit" },
   h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
+  y = { "ggVGy", "Yank File"},
   n = { "<cmd>nohlsearch<CR>", "No HL" },
   q = { "<cmd>:q<CR>", "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
@@ -135,11 +136,7 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-  o = {
-    name = "Options",
-    c = { "<cmd>lua vim.g.cmp_active=false<cr>", "Completion off" },
-    C = { "<cmd>lua vim.g.cmp_active=true<cr>", "Completion on" },
-  },
+  o = { "<cmd>only<cr>", "Only"},
 
   d = {
     name = "Debug",
@@ -190,9 +187,11 @@ local mappings = {
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     d = {
-      "<cmd>Gitsigns diffthis HEAD<cr>",
+      "<cmd>Gvdiffsplit!<cr>",
       "Diff",
     },
+    ["["] = {"<cmd>diffget //2<cr>", "Pull from left"},
+    ["]"] = {"<cmd>diffget //3<cr>", "Pull from right"},
   },
 
   l = {

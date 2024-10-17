@@ -9,7 +9,12 @@ local servers = {
   "clangd",
   "gopls",
   "jdtls",
+  "terraformls",
+  "tflint",
 }
+
+-- https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#installation
+-- sometimes you need a .git file in the root directory for an lsp to mount
 
 local settings = {
   ui = {
