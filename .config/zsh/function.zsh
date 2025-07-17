@@ -23,6 +23,9 @@ sz () {
     /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.name "subtleco"
     /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.email "raymond.alex.martin@gmail.com"
 
+    # Make sure you're using the right remote
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME remote set-url origin git@github.com:SubtleCo/dotfiles.git
+
     # Add tracked files
     /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME add ~/.zshrc ~/.config/zsh ~/.config/nvim ~/.config/tmux
 
