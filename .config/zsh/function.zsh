@@ -16,15 +16,28 @@ in () {
 }
 
 
-function sz () {
+sz () {
     source ~/.zshrc
-    config add ~/.zshrc ~/.config/zsh ~/.config/nvim ~/.config/tmux
-    ron_quote=$(curl http://ron-swanson-quotes.herokuapp.com/v2/quotes)
-    parsed_quote=$(echo "$ron_quote" | sed 's/[]"[]//g')
-    config commit -m "$parsed_quote"
-    config push
-}
 
+    # Set personal git identity just for this repo
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.name "Your Personal Name"
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.email "your_personal_email@example.com"
+
+    # Make sure you're using the right remote
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME remote set-url origin git@github.com-personal:yourusername/dotfiles.git
+
+    # Add tracked files
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME add ~/.zshrc ~/.config/zsh ~/.config/nvim ~/.config/tmux
+
+    # Get Ron quote
+    ron_quote=$(curl -s http://ron-swanson-quotes.herokuapp.com/v2/quotes | sed 's/[\[\]"]//g')
+
+    # Commit with quote
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME commit -m "$ron_quote"
+
+    # Push using correct SSH key
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME push
+}
 
 function envs () {
     export $(grep -v '^#' .env | xargs)
@@ -88,3 +101,8 @@ function get_spotify_uat() {
     -d "code=$SPOTIFY_AUTH_CODE" \
     -d "redirect_uri=$SPOTIFY_REDIRECT_URI"
 }
+
+function oh god(){
+  docker system prune -a -f
+}
+

@@ -69,3 +69,7 @@ alias dp='docker system prune -a'
 alias journal='cd ~/Documents/journal && nvim "$(date +%Y-%m-%d).txt"'
 
 alias ohya="git commit --amend --no-edit"
+
+###########
+
+alias pt='poetry run pytest --disable-warnings -k'

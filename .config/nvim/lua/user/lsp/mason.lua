@@ -1,8 +1,8 @@
 local servers = {
   "html",
-  "tsserver",
-  "pyright",
-  "ruff_lsp",
+  -- "tsserver",
+  -- "pyright",
+  "ruff",
   "bashls",
   "jsonls",
   "yamlls",

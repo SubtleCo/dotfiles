@@ -13,13 +13,13 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
   debug = true,
   sources = {
-    formatting.prettier.with {
-      extra_filetypes = { "toml" },
-    },
-    formatting.ruff,
-    formatting.gofumpt,
-    formatting.goimports_reviser,
-    formatting.stylua,
+    -- formatting.prettier.with {
+    --   extra_filetypes = { "toml" },
+    -- },
+    -- formatting.ruff,
+    -- formatting.gofumpt,
+    -- formatting.goimports_reviser,
+    -- formatting.stylua,
     -- diagnostics.flake8.with {
     --   extra_args = {
     --     "--max-line-length=120",

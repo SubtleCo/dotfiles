@@ -35,7 +35,7 @@ packer.init {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
     end,
-  },
+j },
   git = {
     clone_timeout = 300, -- Timeout, in seconds, for git clones
   },
@@ -91,7 +91,8 @@ return packer.startup(function(use)
   use { "neovim/nvim-lspconfig"} -- enable LSP
   use { "williamboman/mason.nvim"}
   use { "williamboman/mason-lspconfig.nvim"}
-  use { "jose-elias-alvarez/null-ls.nvim"} -- for formatters and linters
+  -- use { "jose-elias-alvarez/null-ls.nvim"} -- broken, replaced with none-ls
+  use { "nvimtools/none-ls.nvim" }
   use { "RRethy/vim-illuminate"}
 
   -- Telescope
@@ -105,6 +106,7 @@ return packer.startup(function(use)
   -- Git
   use { "lewis6991/gitsigns.nvim"}
   use { "https://tpope.io/vim/fugitive.git"}
+  use { "https://tpope.io/vim/rhubarb.git" }
 
   -- DAP
   use { "mfussenegger/nvim-dap"}
