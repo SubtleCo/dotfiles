@@ -20,8 +20,8 @@ sz () {
     source ~/.zshrc
 
     # Set personal git identity just for this repo
-    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.name "Your Personal Name"
-    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.email "your_personal_email@example.com"
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.name "subtleco"
+    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config user.email "raymond.alex.martin@gmail.com"
 
     # Make sure you're using the right remote
     /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME remote set-url origin git@github.com-personal:yourusername/dotfiles.git
