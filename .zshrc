@@ -8,6 +8,8 @@ for conf in "$HOME/.config/zsh/"*.zsh; do
 done
 unset conf
 
+source "$HOME/.config/riverside.zsh"
+
 ZSH_THEME=alex-crowbar
 
 
