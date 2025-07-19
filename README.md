@@ -3,7 +3,11 @@ save em up
 
 ## New Computer Setup
 
-### [homebrew](https://brew.sh)
+### GO FOR IT
+- install ghostty (or iterm or whatever)
+- [homebrew](https://brew.sh)
+- Install XCode CLI tools
+- oh my zsh
 `brew install`
 - `—cask rectangle`
 - `—cask iterm2`
@@ -14,6 +18,7 @@ save em up
 - `neovim`
 - `ripgrep`
 
+YOU ARE HERE
 
 `pyenv`
 - `install 3.11.4` or something
@@ -25,7 +30,7 @@ save em up
 - `ruff`
 - `pynvim`
 
-node
+node (if you want it)
 - `nvm install v20.5.0` or something
 - `npm i -g neovim` (node support for neovim)
 
